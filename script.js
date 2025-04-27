@@ -25,3 +25,25 @@ window.addEventListener('scroll', function() {
         header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.05)';
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleButtons = document.querySelectorAll('.bio-toggle');
+    
+    toggleButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const bio = this.parentElement;
+            const shortBio = bio.querySelector('.bio-short');
+            const fullBio = bio.querySelector('.bio-full');
+            
+            if (fullBio.style.display === 'none') {
+                fullBio.style.display = 'block';
+                shortBio.style.display = 'none';
+                this.textContent = 'Zwiń';
+            } else {
+                fullBio.style.display = 'none';
+                shortBio.style.display = 'block';
+                this.textContent = 'Rozwiń';
+            }
+        });
+    });
+});

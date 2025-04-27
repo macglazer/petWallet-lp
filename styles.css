@@ -1,6 +1,7 @@
 :root {
-    --primary-color: #F08B4B;
-    --primary-light: #FDF5F1;
+    --primary-color: #7DD1CB; /* Miętowy/turkusowy kolor */
+    --primary-light: #E8F7F6; /* Jaśniejsza wersja miętowego */
+    --secondary-color: #FFB5A0; /* Łososiowy/brzoskwiniowy kolor */
     --text-color: #333;
     --light-text: #666;
     --white: #fff;
@@ -93,7 +94,7 @@ header {
 }
 
 .button:hover {
-    background-color: #e07a3b;
+    background-color: #6BC0BA; /* Ciemniejsza wersja miętowego */
     color: white;
     transform: translateY(-2px);
 }
@@ -160,7 +161,7 @@ header {
 .app-button {
     display: inline-flex;
     align-items: center;
-    background-color: #fff;
+    background-color: var(--secondary-color); /* Łososiowy kolor dla przycisków */
     color: var(--text-color);
     padding: 8px 16px;
     border-radius: 8px;
@@ -171,6 +172,7 @@ header {
 
 .app-button:hover {
     transform: translateY(-3px);
+    background-color: #F9A28E; /* Ciemniejszy łososiowy dla hover */
 }
 
 .app-button i {

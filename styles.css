@@ -577,25 +577,25 @@ footer {
 }
 
 .bio-toggle {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 15px;
-    cursor: pointer;
-    font-size: 0.8rem;
-    margin-top: 10px;
-    transition: background-color 0.3s;
-  }
-  
-  .bio-toggle:hover {
-    background-color: #6BC0BA;
-  }
-  
-  .bio-short {
-    margin-bottom: 5px;
-  }
-  
-  .bio-full {
-    margin-bottom: 5px;
-  }
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.bio-toggle:hover {
+  background-color: #6BC0BA;
+}
+
+.bio-short {
+  margin-bottom: 5px;
+}
+
+.bio-full {
+  margin-bottom: 5px;
+}

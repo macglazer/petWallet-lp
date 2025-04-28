@@ -1,7 +1,7 @@
 :root {
-    --primary-color: #7DD1CB; /* Miętowy/turkusowy kolor */
-    --primary-light: #E8F7F6; /* Jaśniejsza wersja miętowego */
-    --secondary-color: #FFB5A0; /* Łososiowy/brzoskwiniowy kolor */
+    --primary-color: #3DC278; /* Jasny zielony zamiast miętowego */
+    --primary-light: #E6F9EF; /* Jaśniejsza wersja zielonego */
+    --secondary-color: #FFB5A0; /* Łososiowy kolor pozostawiony */
     --text-color: #333;
     --light-text: #666;
     --white: #fff;
@@ -94,7 +94,7 @@ header {
 }
 
 .button:hover {
-    background-color: #6BC0BA; /* Ciemniejsza wersja miętowego */
+    background-color: #34A968; /* Ciemniejsza wersja zielonego */
     color: white;
     transform: translateY(-2px);
 }
@@ -102,8 +102,9 @@ header {
 .main-wrapper {
     background-color: var(--primary-color);
     padding: 40px 0;
-    border-radius: 0 0 16px 16px;
-    margin-bottom: 40px;
+    border-radius: 0 0 30px 30px; /* Zwiększony promień zaokrąglenia */
+    margin-bottom: 60px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .hero {
@@ -118,6 +119,8 @@ header {
     border-radius: var(--border-radius);
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
 }
 
 .split-content {
@@ -161,18 +164,19 @@ header {
 .app-button {
     display: inline-flex;
     align-items: center;
-    background-color: var(--secondary-color); /* Łososiowy kolor dla przycisków */
+    background-color: white; /* Zmiana na biały */
     color: var(--text-color);
     padding: 8px 16px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     margin-right: 15px;
     transition: transform 0.3s;
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Dodanie delikatnego obramowania */
 }
 
 .app-button:hover {
     transform: translateY(-3px);
-    background-color: #F9A28E; /* Ciemniejszy łososiowy dla hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
 .app-button i {
@@ -387,6 +391,36 @@ header {
     padding: 0 20px 20px;
 }
 
+.bio-short {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.bio-full {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.bio-toggle {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.bio-toggle:hover {
+    background-color: #34A968;
+    transform: translateY(-2px);
+}
+
 .ecosystem-section {
     padding: 80px 0;
     text-align: center;
@@ -396,7 +430,7 @@ header {
 }
 
 .ecosystem-image {
-    max-width: 700px;
+    max-width: 400px;
     margin: 40px auto;
     border-radius: var(--border-radius);
     overflow: hidden;
@@ -574,28 +608,4 @@ footer {
     .app-button {
         margin-bottom: 15px;
     }
-}
-
-.bio-toggle {
-  background-color: var(--primary-color);
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 15px;
-  cursor: pointer;
-  font-size: 0.8rem;
-  margin-top: 10px;
-  transition: background-color 0.3s;
-}
-
-.bio-toggle:hover {
-  background-color: #6BC0BA;
-}
-
-.bio-short {
-  margin-bottom: 5px;
-}
-
-.bio-full {
-  margin-bottom: 5px;
 }

@@ -608,14 +608,22 @@ footer {
         top: 70px; /* Adjust based on header height */
         right: 0;
         width: 100%;
-        height: calc(100vh - 70px);
-        background: var(--white);
+        height: 55vh;
+        /*height: calc(100vh - 70px);*/
+        /*background: var(--white);*/
         flex-direction: column;
         align-items: center;
         justify-content: start;
         padding: 2rem 0;
         transform: translateX(100%);
         z-index: 1000;
+        /* glassmorphism */
+        background: rgba(255, 255, 255, 0.68);
+        border-radius: 0 0 16px 16px;
+        box-shadow: 0 4px 40px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10.1px);
+        -webkit-backdrop-filter: blur(10.1px);
+        border: 1px solid rgba(255, 255, 255, 0.03);
     }
 
     .nav-links.active {
@@ -626,6 +634,7 @@ footer {
         width: 100%;
         text-align: center;
         padding: 1rem 0;
+        margin: 0;
     }
 
     .nav-links a.button {
@@ -663,11 +672,15 @@ footer {
 
 @media (max-width: 768px) {
     .hero {
-        padding: 120px 0 40px;
+        padding: 70px 0 40px;
     }
     
     .split-section h1 {
         font-size: 2rem;
+    }
+
+    .split-content {
+        padding-bottom: 0;
     }
     
     .features-grid {

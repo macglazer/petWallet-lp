@@ -592,6 +592,10 @@ footer {
     transform: translateY(-2px);
 }
 
+.heart {
+    color: #E25555;
+}
+
 /* Responsive Styles */
 @media (max-width: 992px) {
     .hamburger {
@@ -672,6 +676,10 @@ footer {
     
     .team-grid {
         grid-template-columns: 1fr;
+    }
+
+    .app-screen {
+        max-width: 100vw;
     }
 }
 

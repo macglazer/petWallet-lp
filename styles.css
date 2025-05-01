@@ -1,5 +1,6 @@
 :root {
     --primary-color: #3DC278; /* Jasny zielony zamiast miętowego */
+    --primary-darker: #34A968; /* Ciemniejsza wersja zielonego */
     --primary-light: #E6F9EF; /* Jaśniejsza wersja zielonego */
     --secondary-color: #FFB5A0; /* Łososiowy kolor pozostawiony */
     --text-color: #333;
@@ -101,7 +102,7 @@ header {
 .button {
     display: inline-block;
     background-color: var(--primary-color);
-    color: var(--primary-light);;
+    color: var(--white);
     padding: 12px 20px;
     border-radius: 30px;
     font-weight: 500;
@@ -109,7 +110,7 @@ header {
 }
 
 .button:hover {
-    background-color: #34A968; /* Ciemniejsza wersja zielonego */
+    background-color: var(--primary-darker);
     color: var(--primary-light);
     transform: translateY(-2px);
 }
@@ -177,10 +178,10 @@ header {
 }
 
 .app-button {
-    min-width: 150px;
+    min-width: 160px;
     display: inline-flex;
     align-items: center;
-    background-color: white; /* Zmiana na biały */
+    background-color: var(--white); /* Zmiana na biały */
     color: var(--text-color);
     padding: 8px 16px;
     border-radius: 8px;
@@ -304,6 +305,7 @@ header {
     display: flex;
     justify-content: center;
     background-color: transparent;
+    overflow: hidden;
 }
 
 .app-screen img {
@@ -434,7 +436,7 @@ header {
 }
 
 .bio-toggle:hover {
-    background-color: #34A968;
+    background-color: var(--primary-darker);
     transform: translateY(-2px);
 }
 
@@ -562,6 +564,34 @@ footer {
     border-radius: 8px;
 }
 
+.scroll-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 10000;
+}
+
+.scroll-top-btn.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top-btn:hover {
+    background: var(--primary-darker);
+    transform: translateY(-2px);
+}
+
 /* Responsive Styles */
 @media (max-width: 992px) {
     .hamburger {
@@ -575,7 +605,7 @@ footer {
         right: 0;
         width: 100%;
         height: calc(100vh - 70px);
-        background: white;
+        background: var(--white);
         flex-direction: column;
         align-items: center;
         justify-content: start;
@@ -618,6 +648,13 @@ footer {
     .footer-container {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .scroll-top-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -656,6 +693,10 @@ footer {
     }
 
     .app-button {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-right: 0;
         margin-bottom: 1rem;
     }
 }

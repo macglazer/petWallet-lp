@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
     const toggleBioButtons = document.querySelectorAll('.bio-toggle');
+    const scrollTopBtn = document.querySelector('.scroll-top-btn');
+    const heroSection = document.querySelector('#hero');
 
     hamburger.addEventListener('click', (e) => {
         e.stopPropagation(); // Important for click-outside detection
@@ -65,4 +67,25 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    function toggleScrollTopButton() {
+        const heroHeight = heroSection.offsetHeight;
+        if (window.scrollY > heroHeight) {
+            scrollTopBtn.classList.add('active');
+        } else {
+            scrollTopBtn.classList.remove('active');
+        }
+    }
+
+    scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+        scrollTopBtn.classList.remove('active');
+    });
+
+    window.addEventListener('scroll', toggleScrollTopButton);
+
+    toggleScrollTopButton();
 });
